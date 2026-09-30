@@ -90,6 +90,15 @@
     color: white;
     padding: 10px;
     border-radius: 30px;
+    border: blueviolet solid 1px;
+}
+
+.categories p:hover {
+    background-color: transparent;
+    border: blueviolet solid 1px;
+    color: black;
+    cursor: pointer;
+    transition: 1s;
 }
 
 .sale-image img {
@@ -106,9 +115,24 @@
     position: absolute;
     top: 20px;
     left: 200px;
-    border: solid black 2px;
+    border: solid black 3px;
     padding: 40px;
-    
+    animation: zoom;
+    animation-duration: 2s;
+    opacity: 0;    
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .recommandation {
